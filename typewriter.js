@@ -1,18 +1,9 @@
-const sentence = "hello there from lighthouse labs";
-const sentLen = sentence.length
-setTimeout(() => {
-  //  console.log(char); 
-    process.stdout.write('\n');
-  }, (sentLen + 1) * 50);
-
-for (let x = 0; x < sentLen; x++){
+const sentence = '"I don\'t know...  -Celeste Stephens\n';
+// the first callback on the handler will be scheduled in 1 second;
+let appointmentTime = 1000;
+for (const char of sentence) {
   setTimeout(() => {
-    //  console.log(char); 
-      process.stdout.write(sentence[x]);
-    }, x * 50);
+    process.stdout.write(char);
+  }, appointmentTime)
+  appointmentTime += 50;
 }
-
-//console.log("new line?");
-
-// process.stdout.write("\n");
-
